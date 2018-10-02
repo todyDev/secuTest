@@ -12,5 +12,7 @@
       <p><a href='<c:url value="/user/page"/>'>user</a></p>
       <p><a href='<c:url value="/admin/page"/>'>admin</a></p>
       <p><a href='<c:url value="/page"/>'>guest</a></p>
+      <br><br>
+      <p><a href='<c:url value="/logout"/>'>logout</a></p>
 </body>
 </html>
