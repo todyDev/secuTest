@@ -5,6 +5,8 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd">
  
+ 	<security:http pattern="/resources/**" security="none"></security:http>
+ 
  	<security:http auto-config="true" >
 		 	<security:intercept-url pattern="/user/**" access="ROLE_USER,ROLE_ADMIN"/>
 		 	<security:intercept-url pattern="/admin/**" access="ROLE_ADMIN"/>
@@ -13,6 +15,11 @@
 		 	<security:form-login
 		 		default-target-url="/"
 		 		
+		 	/>
+		 	
+		 	<security:logout
+		 		invalidate-session="true"
+		 		logout-success-url="/logout"
 		 	/>
 		 	
  	</security:http>
