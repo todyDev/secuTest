@@ -13,7 +13,7 @@ $(document).ready(function(){
 	var url= '${url}';
 	alert(msgg);
 	window.location.href= url; */
-	alert('라라');
+	alert('로그아웃되었습니다.');
 	window.location.href='/';
 });
 </script>
