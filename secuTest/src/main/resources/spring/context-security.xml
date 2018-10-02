@@ -11,7 +11,8 @@
 		 	<security:intercept-url pattern="/**" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
 		 	
 		 	<security:form-login
-		 		default-target-url="/index"
+		 		default-target-url="/"
+		 		
 		 	/>
 		 	
  	</security:http>
