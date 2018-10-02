@@ -18,5 +18,23 @@ public class TestController {
          
         return mv;
     }
+    
+    @RequestMapping(value="/admin/page")
+    public String adminPage() throws Exception {
+    	//ModelAndView mv = new ModelAndView("/admin/page");
+    	return "/admin/page";
+    }
+    
+    @RequestMapping(value="/user/page")
+    public String userPage() throws Exception {
+    	//ModelAndView mv = new ModelAndView("/user/page");
+    	return "/user/page";
+    }
+    
+    @RequestMapping(value="/page")
+    public String page() throws Exception {
+    	//ModelAndView mv = new ModelAndView("/page");
+    	return "/page";
+    }
 
 }
