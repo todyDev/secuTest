@@ -44,8 +44,16 @@ public class TestController {
     public ModelAndView logout(HttpServletRequest req, HttpSession session) throws Exception {
     	session.invalidate();
     	ModelAndView mv = new ModelAndView("/goIndex");
-    	/* mv.addObject("msg", "로그아웃");
-    	mv.addObject("url", "/"); */
+    	mv.addObject("msg", "로그아웃되었습니다.");
+    	mv.addObject("url", "/");
+    	return mv;
+    }
+    
+    @RequestMapping(value="/access_denied")
+    public ModelAndView accessDenied() throws Exception {
+    	ModelAndView mv = new ModelAndView("/goIndex");
+    	mv.addObject("msg", "접근 권한이 없습니다.");
+    	mv.addObject("url", "/");
     	return mv;
     }
 

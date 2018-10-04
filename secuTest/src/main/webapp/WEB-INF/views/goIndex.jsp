@@ -9,12 +9,12 @@
 <script src="/resources/js/jquery-3.1.1.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
-	/* var msgg = '${msg}';
+	var msgg = '${msg}';
 	var url= '${url}';
 	alert(msgg);
-	window.location.href= url; */
-	alert('로그아웃되었습니다.');
-	window.location.href='/';
+	window.location.href= url;
+	/* alert('로그아웃되었습니다.');
+	window.location.href='/'; */
 });
 </script>
 </head>
