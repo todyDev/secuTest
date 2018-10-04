@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -12,18 +13,25 @@
 
 <title>LOGIN</title>
 </head>
-<body><div class="container">
+<body>
        <br><br>
        <div class="container col-4">
-           <form class="px-4 py-3">
+           <form class="px-4 py-3" action="/j_spring_security_check" method="post">
                <div class="form-group">
                    <label>ID</label>
-                   <input type="text" class="form-control" placeholder="example">
+                   <input type="text" class="form-control" name="loginId" placeholder="example">
                </div>
                <div class="form-group">
                    <label>Password</label>
-                   <input type="password" class="form-control" placeholder="password">
+                   <input type="password" class="form-control" name="loginPwd" placeholder="password">
                </div>
+               <c:if test="${fail }">
+               	<div class="form-group">
+               		<p style="color:red">Your login attempt was not successful, try again.</p>
+               		<p style="color:red">Reason: ${sessionScope["SPRING_SECURITY_LAST_EXCEPTION"].message }</p>
+               	</div>
+               </c:if>
+               
                <div class="form-check">
                    <label class="form-check-label">
                    <input type="checkbox" class="form-check-input">
@@ -35,7 +43,7 @@
            <div class="dropdown-divider"></div>
            <a class="dropdown-item" href="#">New around here? Sign up</a>
            <a class="dropdown-item" href="#">Forgot password?</a>
+           <a class="dropdown-item" href='<c:url value="/"/>'>back</a>
        </div>
-</div>
 </body>
 </html>

@@ -56,5 +56,10 @@ public class TestController {
     	mv.addObject("url", "/");
     	return mv;
     }
-
+    
+    @RequestMapping(value="/login/loginPage")
+    public String loginPage() throws Exception {
+    	return "/login/loginPage";
+    }
+    
 }
