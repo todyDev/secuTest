@@ -22,6 +22,18 @@
 		<appender-ref ref="console"/>
 	</logger>
 	
+	 <!-- Query Loggers -->
+     <logger name="jdbc.sqlonly" additivity="false"> 
+       <level value="info"/>
+       <appender-ref ref="console-infolog"/>
+     </logger>
+         
+     <logger name="jdbc.resultsettable" additivity="false"> 
+       <level value="ifno"/>
+       <appender-ref ref="console"/>
+     </logger>
+     <!--  -->
+	
 	<!-- 3rdparty Loggers -->
 	<logger name="org.springframework.core">
 		<level value="info" />
