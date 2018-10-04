@@ -13,7 +13,7 @@
 
 <title>LOGIN</title>
 </head>
-<body><div class="container">
+<body>
        <br><br>
        <div class="container col-4">
            <form class="px-4 py-3" action="/j_spring_security_check" method="post">
@@ -44,6 +44,5 @@
            <a class="dropdown-item" href="#">Forgot password?</a>
            <a class="dropdown-item" href='<c:url value="/"/>'>back</a>
        </div>
-</div>
 </body>
 </html>
