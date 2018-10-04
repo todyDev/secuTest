@@ -12,29 +12,30 @@
 
 <title>LOGIN</title>
 </head>
-<body>
-<br><br>
-   <div class="container col-4">
-       <form class="px-4 py-3">
-           <div class="form-group">
-               <label for="exampleDropdownFormEmail1">ID</label>
-               <input type="text" class="form-control" id="exampleDropdownFormEmail1" placeholder="Example">
-           </div>
-           <div class="form-group">
-               <label for="exampleDropdownFormPassword1">Password</label>
-               <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
-           </div>
-           <div class="form-check">
-               <label class="form-check-label">
-               <input type="checkbox" class="form-check-input">
-               Remember me
-               </label>
-           </div>
-           <button type="submit" class="btn btn-primary">Sign in</button>
-       </form>
-       <div class="dropdown-divider"></div>
-       <a class="dropdown-item" href="#">New around here? Sign up</a>
-       <a class="dropdown-item" href="#">Forgot password?</a>
-   </div>
+<body><div class="container">
+       <br><br>
+       <div class="container col-4">
+           <form class="px-4 py-3">
+               <div class="form-group">
+                   <label>ID</label>
+                   <input type="text" class="form-control" placeholder="example">
+               </div>
+               <div class="form-group">
+                   <label>Password</label>
+                   <input type="password" class="form-control" placeholder="password">
+               </div>
+               <div class="form-check">
+                   <label class="form-check-label">
+                   <input type="checkbox" class="form-check-input">
+                   Remember me
+                   </label>
+               </div>
+               <button type="submit" class="btn btn-primary">Sign in</button>
+           </form>
+           <div class="dropdown-divider"></div>
+           <a class="dropdown-item" href="#">New around here? Sign up</a>
+           <a class="dropdown-item" href="#">Forgot password?</a>
+       </div>
+</div>
 </body>
 </html>
