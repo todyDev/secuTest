@@ -14,6 +14,10 @@
 		 	
 		 	<security:form-login
 		 		default-target-url="/"
+		 		username-parameter="loginId"
+		 		password-parameter="loginPwd"
+		 		login-page="/login/loginPage"
+		 		authentication-failure-url="/loginFailure"
 		 		
 		 	/>
 		 	
