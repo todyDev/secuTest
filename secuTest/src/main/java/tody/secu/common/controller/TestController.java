@@ -61,6 +61,7 @@ public class TestController {
     public String loginPage() throws Exception {
     	return "/login/loginPage";
     }
+<<<<<<< HEAD
     
     @RequestMapping(value="/loginFailure")
     public ModelAndView loginFailure() throws Exception {
@@ -68,5 +69,14 @@ public class TestController {
     	mv.addObject("fail", true);
     	return mv;
     }
+=======
+>>>>>>> refs/remotes/origin/master
 
+    @RequestMapping(value="/loginFailure")
+    public ModelAndView loginFailure() throws Exception {
+    	ModelAndView mv = new ModelAndView("/login/loginPage");
+    	mv.addObject("fail", true);
+    	return mv;
+    }
+    
 }
