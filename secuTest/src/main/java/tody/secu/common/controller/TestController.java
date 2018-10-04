@@ -62,4 +62,11 @@ public class TestController {
     	return "/login/loginPage";
     }
     
+    @RequestMapping(value="/loginFailure")
+    public ModelAndView loginFailure() throws Exception {
+    	ModelAndView mv = new ModelAndView("/login/loginPage");
+    	mv.addObject("fail", true);
+    	return mv;
+    }
+
 }
