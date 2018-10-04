@@ -27,8 +27,7 @@
                </div>
                <c:if test="${fail }">
                	<div class="form-group">
-               		<p style="color:red">Your login attempt was not successful, try again.</p>
-               		<p style="color:red">Reason: ${sessionScope["SPRING_SECURITY_LAST_EXCEPTION"].message }</p>
+               		<p style="color:red">실패: ${sessionScope["SPRING_SECURITY_LAST_EXCEPTION"].message }</p>
                	</div>
                </c:if>
                
