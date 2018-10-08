@@ -62,6 +62,13 @@
 		 		error-page="/access_denied"
 		 	/>
 		 	
+		 	<security:session-management>
+		 		<security:concurrency-control
+		 			max-sessions="1"
+		 			expired-url="/loginDuplicate"
+		 		/>
+		 	</security:session-management>
+		 	
  	</security:http>
  	
  	<bean id="userAuthProvider" class="tody.secu.common.service.UserAuthenticationProvider"/>

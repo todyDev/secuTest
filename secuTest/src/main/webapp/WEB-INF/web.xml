@@ -44,6 +44,11 @@
 		<filter-name>springSecurityFilterChain</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
+	
+	<!-- 로그인 중복 방지 -->
+	<listener>
+        <listener-class>org.springframework.security.web.session.HttpSessionEventPublisher</listener-class>
+    </listener>
 	<!--  -->
 	
 	<!-- utf8 Encoding -->

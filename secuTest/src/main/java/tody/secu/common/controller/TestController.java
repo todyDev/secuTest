@@ -69,4 +69,12 @@ public class TestController {
     	return mv;
     }
     
+    @RequestMapping(value="/loginDuplicate")
+    public ModelAndView loginDuplicate() throws Exception {
+    	ModelAndView mv = new ModelAndView("/goIndex");
+    	mv.addObject("msg", "다른 브라우저에서 로그인이 감지되어 자동으로 로그아웃합니다.");
+    	mv.addObject("url", "/");
+    	return mv;
+    }
+    
 }
