@@ -47,9 +47,9 @@
 		 		default-target-url="/"
 		 		username-parameter="loginId"
 		 		password-parameter="loginPwd"
-		 		login-page="/login/loginPage"
+		 		login-page="/secu/loginPage"
 		 		authentication-failure-url="/loginFailure"
-		 		login-processing-url="/login/loginUser"
+		 		login-processing-url="/secu/login"
 		 		
 		 	/>
 		 	
@@ -65,7 +65,8 @@
  	</security:http>
  	
  	<bean id="userAuthProvider" class="tody.secu.common.service.UserAuthenticationProvider"/>
-
+	<bean id="passwordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
+	
  	<security:authentication-manager>
  		<security:authentication-provider ref="userAuthProvider"/>
  	</security:authentication-manager>
