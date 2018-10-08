@@ -8,43 +8,50 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+@SuppressWarnings("serial")
 public class UserDetailsVO implements UserDetails {
 	
-	private String user_id;
-	private String user_pw;
-	private String name;
-	private List<String> authorities;
+	private String ID;
+	private String PASSWORD;
+	private String NAME;
+	private String AUTHORITY;
 	
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		// 계정이 갖고 있는 권한 목록 리턴
 		ArrayList<GrantedAuthority> auth = new ArrayList<GrantedAuthority>();
-		for(String role : authorities) {
-			auth.add(new SimpleGrantedAuthority(role));
-		}
+		auth.add(new SimpleGrantedAuthority(AUTHORITY));
 		return auth;
 	}
 
 	@Override
 	public String getPassword() {
 		// 계정의 패스워드 리턴
-		return user_pw;
+		return PASSWORD;
 	}
 
 	@Override
 	public String getUsername() {
 		// 계정의 이름(id) 리턴
-		return user_id;
+		return ID;
 	}
 	
 	public String getName() {
-		return name;
+		return NAME;
 	}
 
 	public void setName(String name) {
-		this.name = name;
+		this.NAME = name;
 	}
 	
+	public String getAUTHORITY() {
+		return AUTHORITY;
+	}
+
+	public void setAUTHORITY(String aUTHORITY) {
+		AUTHORITY = aUTHORITY;
+	}
+
 	// 체크할 필요가 없다면 true로 하면 됨
 	@Override
 	public boolean isAccountNonExpired() {
