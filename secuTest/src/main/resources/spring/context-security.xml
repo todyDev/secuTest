@@ -71,6 +71,7 @@
 		 	
 		 	<security:csrf/>
 		 	
+		 	
  	</security:http>
  	
  	<bean id="userAuthProvider" class="tody.secu.common.service.UserAuthenticationProvider"/>
