@@ -20,6 +20,7 @@
 		 		password-parameter="loginPwd"
 		 		login-page="/login/loginPage"
 		 		authentication-failure-url="/loginFailure"
+		 		login-processing-url="/login/loginUser"
 		 		
 		 	/>
 		 	

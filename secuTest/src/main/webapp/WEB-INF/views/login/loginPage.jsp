@@ -16,7 +16,7 @@
 <body>
        <br><br>
        <div class="container col-4">
-           <form class="px-4 py-3" action="/j_spring_security_check" method="post">
+           <form class="px-4 py-3" action='<c:url value='/login/loginUser'/>' method="post">
                <div class="form-group">
                    <label>ID</label>
                    <input type="text" class="form-control" name="loginId" placeholder="example">
